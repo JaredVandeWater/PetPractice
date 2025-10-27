@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@types/express": "^5.0.4",
+    "@types/node": "^24.9.1"
+  },
+  "name": "petpractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "undici-types": "^7.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredVandeWater/PetPractice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JaredVandeWater/PetPractice/issues"
+  },
+  "homepage": "https://github.com/JaredVandeWater/PetPractice#readme"
+}
