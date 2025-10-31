@@ -1,59 +1,36 @@
 <template>
-  <header>
-    <nav class="">
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/about">About</NuxtLink>
-    </nav>
-  </header>
+  <div class="icon-section">
+    <component :is="icon" class="icon" />
+    <div>
+      <h3>{{ title }}</h3>
+      <p>
+        {{ desc }}
+      </p>
+    </div>
+  </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-const count = ref(0);
-
-function increment() {
-  count.value++;
-}
+<script setup lang="ts">
+const props = defineProps<{
+  icon: Component;
+  title: string;
+  desc?: string;
+}>();
 </script>
 
 <style lang="scss" scoped>
-nav {
-  position: absolute;
+.icon-section {
   display: flex;
-  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
-  color: #333;
-  font-family: "Inter", sans-serif;
+  align-items: center;
+  gap: 25px;
 
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #222;
-  }
-
-  .count-display {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-  }
-
-  .count-button {
-    background-color: #0070f3;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s ease-in-out;
-
-    &:hover {
-      background-color: #0059c1;
-    }
-
-    &:active {
-      transform: scale(0.97);
-    }
+  .icon {
+    flex-shrink: 0;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(216, 255, 255);
+    border-radius: 100%;
+    padding: 10px;
   }
 }
 </style>
