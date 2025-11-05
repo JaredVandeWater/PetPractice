@@ -19,11 +19,15 @@ function increment() {
 
 <style lang="scss" scoped>
 nav {
-  position: absolute;
+  position: fixed;
+  top: 0;
   display: flex;
-  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+  background: rgb(47, 125, 186);
   color: #333;
   font-family: "Inter", sans-serif;
+  padding: 2rem;
+  width: 100%;
+  z-index: 1000;
 
   h1 {
     font-size: 2rem;

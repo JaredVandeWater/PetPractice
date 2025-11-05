@@ -23,6 +23,7 @@ const props = defineProps<{
   display: flex;
   align-items: center;
   gap: 25px;
+  padding-bottom: 20px;
 
   .icon {
     flex-shrink: 0;
@@ -31,6 +32,14 @@ const props = defineProps<{
     background-color: rgb(216, 255, 255);
     border-radius: 100%;
     padding: 10px;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
   }
 }
 </style>
