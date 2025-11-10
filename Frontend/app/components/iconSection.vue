@@ -1,11 +1,9 @@
 <template>
-  <div class="icon-section">
+  <div class="icon-section" :class="{ 'no-desc': !desc }">
     <component :is="icon" class="icon" />
     <div>
       <h3>{{ title }}</h3>
-      <p>
-        {{ desc }}
-      </p>
+      <p v-if="desc">{{ desc }}</p>
     </div>
   </div>
 </template>
@@ -23,7 +21,7 @@ const props = defineProps<{
   display: flex;
   align-items: center;
   gap: 25px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 
   .icon {
     flex-shrink: 0;
@@ -36,10 +34,19 @@ const props = defineProps<{
 
   h3 {
     margin: 0;
+    margin-bottom: 10px;
+    font-size: 25px;
   }
 
   p {
     margin: 0;
+    font-size: 20px;
+  }
+
+  &.no-desc {
+    h3 {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

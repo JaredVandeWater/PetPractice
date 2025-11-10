@@ -4,49 +4,61 @@
       <h1>Get Local & Professional Pet Care with Winterized Yourgi</h1>
     </section>
 
-    <section class="content">
-      <img src="../assets/winter-dog-9rej40jms41naniq-1511055065.jpg" />
-      <h2>Discover the Benefits of Trusted Pet Care with Yourgi</h2>
-      <div class="icon-list">
-        <IconSection
-          :icon="Snowflake"
-          title="Background-checked Caregivers"
-          desc="Yourgi connects you with verified professionals for worry-free pet care."
-        />
-        <IconSection
-          :icon="Snowflake"
-          title="We’re Here 24/7"
-          desc="Book services anytime, anywhere, and keep your pet happy and healthy."
-        />
-        <IconSection
-          :icon="Snowflake"
-          title="Our Trusted Network of Locations"
-          desc="Rest easy knowing your pet is in safe hands with our experts."
-        />
+    <section class="container content">
+      <div>
+        <img class="content-img" src="../assets/1992312-3631488892.jpg" />
+      </div>
+      <div>
+        <h2>Discover the Benefits of Trusted Pet Care with Yourgi</h2>
+        <div>
+          <IconSection
+            :icon="Snowflake"
+            title="Background-checked Caregivers"
+            desc="Yourgi connects you with verified professionals for worry-free pet care."
+          />
+          <IconSection
+            :icon="Snowflake"
+            title="We’re Here 24/7"
+            desc="Book services anytime, anywhere, and keep your pet happy and healthy."
+          />
+          <IconSection
+            :icon="Snowflake"
+            title="Our Trusted Network of Locations"
+            desc="Rest easy knowing your pet is in safe hands with our experts."
+          />
+        </div>
       </div>
     </section>
 
-    <section class="content">
-      <img src="../assets/1992312-3631488892.jpg" />
-      <h2>Discover the Benefits of Trusted Pet Care with Yourgi</h2>
-      <div class="icon-list">
-        <IconSection
-          :icon="Snowflake"
-          title="Verified professionals for your peace of mind"
-        />
-        <IconSection
-          :icon="Snowflake"
-          title="Simple booking at your fingertips"
-        />
-        <IconSection
-          :icon="Snowflake"
-          title="Earn rewards while caring for your pets"
-        />
+    <section class="container">
+      <div class="content flip">
+        <div>
+          <h2>Why Rebuild this site with a winter theme?</h2>
+          <div>
+            <IconSection
+              :icon="Snowflake"
+              title="Background-checked Caregivers"
+            />
+            <IconSection :icon="Snowflake" title="We’re Here 24/7" />
+            <IconSection
+              :icon="Snowflake"
+              title="Our Trusted Network of Locations"
+            />
+          </div>
+        </div>
+        <div>
+          <img
+            class="content-img"
+            src="../assets/winter-dog-9rej40jms41naniq-1511055065.jpg"
+          />
+        </div>
       </div>
-      <button>Book Now</button>
+      <div>
+        <button>Book Now</button>
+      </div>
     </section>
 
-    <section class="content">
+    <section class="container">
       <h2>Thousands of Satisfied Pet Parents</h2>
       <p>
         Our customers love the convenience and care they receive from our
@@ -55,35 +67,36 @@
       <ReviewCarousel />
     </section>
 
-    <section class="content">
-      <img src="../assets/wp5326819-2955218145.jpg" />
-      <h2>Discover the Benefits of Trusted Pet Care with Yourgi</h2>
-      <div class="icon-list">
-        <IconSection
-          :icon="Snowflake"
-          title="Verified professionals for your peace of mind"
-        />
-        <IconSection
-          :icon="Snowflake"
-          title="Simple booking at your fingertips"
-        />
-        <IconSection
-          :icon="Snowflake"
-          title="Earn rewards while caring for your pets"
-        />
+    <section class="container">
+      <div class="content">
+        <div>
+          <img class="content-img" src="../assets/wp5326819-2955218145.jpg" />
+        </div>
+        <div>
+          <h2>Why Rebuild this site with a winter theme?</h2>
+          <div>
+            <IconSection
+              :icon="Snowflake"
+              title="Background-checked Caregivers"
+            />
+            <IconSection :icon="Snowflake" title="We’re Here 24/7" />
+            <IconSection
+              :icon="Snowflake"
+              title="Our Trusted Network of Locations"
+            />
+          </div>
+        </div>
       </div>
-      <button>Book Now</button>
+      <div>
+        <button>Book Now</button>
+      </div>
     </section>
+
     <hr />
-    <section class="content">
-      <h2>Find a Yourgi Location Near You</h2>
+    <section class="container">
+      <h2>Find a Festive Yourgi Location Near You</h2>
       <div class="location-list">
-        <a
-          v-for="loc in locations"
-          :key="loc"
-          :href="`/locations/${loc.toLowerCase().replace(/\\s+/g, '-')}`"
-          class="location"
-        >
+        <a v-for="loc in locations" :key="loc" :href="`/`" class="location">
           <span>{{ loc }}</span>
         </a>
       </div>
@@ -94,26 +107,15 @@
 <script setup>
 import Snowflake from "~/assets/snowflake.vue";
 const locations = [
-  "California",
-  "Colorado",
-  "Connecticut",
-  "Florida",
-  "Georgia",
-  "Idaho",
-  "Illinois",
-  "Indiana",
-  "Louisiana",
-  "Maryland",
-  "Massachusetts",
-  "Minnesota",
-  "New Jersey",
-  "New York",
-  "North Carolina",
-  "South Carolina",
-  "Tennessee",
-  "Texas",
-  "Washington",
-  "Wisconsin",
+  "Gumdrop Forest",
+  "Candy Cane Lane",
+  "The North Pole",
+  "Marshmallow Mountain",
+  "Sugarplum Square",
+  "Peppermint Plaza",
+  "Snowball Park",
+  "Winter Wonderland",
+  "Cocoa Campground",
 ];
 </script>
 
@@ -138,37 +140,57 @@ h1 {
   padding-left: 10%;
   font-size: 50px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     font-size: 30px;
   }
 }
 
-img {
-  min-width: 800px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 25px;
+h2 {
+  font-size: 50px;
+  margin-top: 30px;
 }
 
 section {
   padding-top: 2rem;
 }
 
+.content-img {
+  width: 100%;
+  min-height: 100%;
+  max-width: 800px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
 .content {
-  justify-self: center;
+  display: flex;
+  align-items: stretch;
+  gap: 60px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-content: center;
   max-width: 1300px;
+  margin: 0 auto;
 }
 
 .location-list {
   display: flex;
-  flex-wrap: wrap; /* allows wrapping to next line */
-  justify-content: center; /* centers items horizontally */
-  gap: 1rem; /* space between items */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   padding: 1rem 0;
 }
 
 .location {
-  flex: 1 1 calc(25% - 1rem); /* 4 columns by default */
+  flex: 1 1 calc(25% - 1rem);
   text-align: center;
   background-color: #f2f2f2;
   border-radius: 0.5rem;
@@ -182,5 +204,11 @@ hr {
 }
 .parent {
   display: grid;
+}
+
+.flip {
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+  }
 }
 </style>
